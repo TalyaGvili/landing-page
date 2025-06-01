@@ -1,7 +1,7 @@
 export const services = [
   {
     title: "Intelligent Automation",
-    description: "Streamline processes and reduce manual tasks.",
+    description: "AI model that provides the best options for you.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ export const services = [
   },
   {
     title: "Predictive Insights",
-    description: " Anticipate trends and mitigate risks before they occur.",
+    description: "Receive a wide variety of jobs/employees that are most suitable for you.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

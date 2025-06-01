@@ -3,7 +3,7 @@ export const pricingPlans = [
     title: "Basic",
     price: "$19/mo",
     features: [
-      "Access to basic AI tools",
+      "Access to basic tools",
       "Limited data analytics",
       "Email support",
     ],
@@ -13,9 +13,9 @@ export const pricingPlans = [
     price: "$49/mo",
     features: [
       "Everything in Basic",
-      "Advanced AI features",
+      "Advanced features",
       "Real‑time analytics",
-      "Priority email support",
+      ".....",
     ],
     bestValue: true,
   },
@@ -25,8 +25,8 @@ export const pricingPlans = [
     features: [
       "Everything in Pro",
       "Dedicated account manager",
-      "Custom integrations",
       "24/7 premium support",
+      "......",
     ],
   },
 ];

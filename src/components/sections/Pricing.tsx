@@ -11,7 +11,7 @@ export const Pricing = () => {
       <Container className="text-center">
         <Title>Pricing </Title>
         <Paragraph className="mt-4">
-          Choose the plan that's right for your business.
+        High-Tech Market Size
         </Paragraph>
       </Container>
       <Container className="mt-12">

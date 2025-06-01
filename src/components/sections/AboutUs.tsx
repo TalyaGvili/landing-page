@@ -19,13 +19,11 @@ export const AboutUs = () => {
         </div>
 
         <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col">
-          <Title> About Our AI Solution </Title>
+          <Title> JOBA's Solution </Title>
           <Paragraph>
-            We are on a mission to empower businesses with transformative AI
-            technology. Our team of experts combines industry‑leading research
-            with innovative algorithms to deliver a platform that adapts to your
-            unique needs. Join us and lead the digital revolution in your
-            industry.
+            JOBA creates a two‑way match—aligning skills, culture, and values for both companies and candidates.
+            Our smart filters and custom questionnaires ensure only the right opportunities and talent connect.
+            We empower SMEs to hire by compatibility, and help job seekers find roles where they truly belong.
           </Paragraph>
 
           <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">

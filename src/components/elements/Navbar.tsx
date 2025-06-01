@@ -1,5 +1,4 @@
 import { Container } from "../shared/Container";
-import logo from "/assets/icon.svg";
 import { NavItem } from "../shared/NavItem";
 import { BtnLink } from "../shared/BtnLink";
 import { useThemeStore } from "../../store/ThemeStore";
@@ -14,6 +13,9 @@ export const navItems = [
 export const Navbar = () => {
   const { toggleTheme, theme } = useThemeStore();
 
+  // 👇 Dynamically set logo based on theme
+  const logo = "/assets/joba-logo.webp";
+
   return (
     <header className="absolute inset-x-0 top-0 z-50 py-6">
       <Container>
@@ -21,13 +23,11 @@ export const Navbar = () => {
           {/* Logo */}
           <div className="min-w-max inline-flex relative">
             <a href="/" className="relative flex items-center gap-3">
-              <img src={logo} alt="EdgeAI Logo" className="w-10 h-10" />
-              <div className="inline-flex text-lg font-semibold text-heading-1">
-                EdgeAI
-              </div>
+            <img src={logo} alt="JOBA Logo" className="w-20 h-20 lg:w-26 lg:h-26" />
             </a>
           </div>
 
+          {/* Nav items */}
           <div
             className="flex flex-col lg:flex-row w-full lg:justify-between lg:items-center 
                       absolute top-full left-0 lg:static lg:top-0 bg-body lg:bg-transparent 
@@ -42,15 +42,16 @@ export const Navbar = () => {
                 <NavItem href={item.href} text={item.text} key={key} />
               ))}
             </ul>
-            <div
+            {/* <div
               className="lg:min-w-max flex items-center sm:w-max w-full pb-6 
                             lg:pb-0 border-b border-box-border lg:border-0
                             px-6 lg:px-0"
             >
               <BtnLink text="Get Started" href="#cta" className="" />
-            </div>
+            </div> */}
           </div>
 
+          {/* Theme toggle */}
           <div className="min-w-max flex items-center gap-x-3">
             <button
               onClick={toggleTheme}

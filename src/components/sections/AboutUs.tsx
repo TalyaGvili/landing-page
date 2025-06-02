@@ -6,19 +6,19 @@ import { Title } from "../shared/Title";
 export const AboutUs = () => {
   return (
     <section id="about-us">
-      {" "}
-      <Container className="flex flex-col md:flex-row gap-10 lg:gap-12 items-center">
-        <div className="w-full md:w-5/12 lg:w-1/2">
-          <div className="w-full h-80 sm:h-96 relative">
-            <img
-              src="https://images.pexels.com/photos/8728381/pexels-photo-8728381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              className="w-full h-full object-cover rounded-3xl shadow-lg relative z-10"
-              alt="About Our Mission"
-            />
-          </div>
+      <Container className="flex flex-col md:flex-row gap-y-2 md:gap-x-10 lg:gap-x-12 items-center md:items-start lg:items-center py-4 lg:py-16">
+        
+        {/* Image Section */}
+        <div className="w-full md:w-5/12 lg:w-1/2 flex justify-center items-center">
+          <img
+            src="/assets/AboutUs.png"
+            className="w-2/3 sm:w-3/4 md:w-full lg:w-[90%] xl:w-[500px] h-auto object-contain"
+            alt="About Our Mission"
+          />
         </div>
 
-        <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col">
+        {/* Text & Info Section */}
+        <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col justify-center">
           <Title> JOBA's Solution </Title>
           <Paragraph>
             JOBA creates a two‑way match—aligning skills, culture, and values for both companies and candidates.
@@ -26,7 +26,7 @@ export const AboutUs = () => {
             We empower SMEs to hire by compatibility, and help job seekers find roles where they truly belong.
           </Paragraph>
 
-          <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
+          <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
             <Info
               title="Mission"
               description="Our mission is to use AI for the good of humanity and the planet."
@@ -47,6 +47,7 @@ export const AboutUs = () => {
                 />
               </svg>
             </Info>
+
             <Info
               title="Vision"
               description="Our vision is to drive business innovation and growth."

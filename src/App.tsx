@@ -10,7 +10,7 @@ import { BusinessModel } from "./components/sections/BusinessModel";
 
 function App() {
   return (
-    <Layout title="EdgeAI">
+    <Layout title="JOBA">
       <Hero />
       <Brands />
       <CompetitorTable />

@@ -1,50 +1,91 @@
+import { useThemeStore } from "../../store/ThemeStore";
+import { Title } from "../shared/Title";
 
 export const CompetitorTable = () => {
+  const theme = useThemeStore((state) => state.theme);
+
   return (
-    <section className="bg-body text-heading-1 py-16">
-      <div className="max-w-5xl mx-auto text-center mb-12">
-        <h2 className="text-3xl font-bold">Direct and Indirect Competitors</h2>
+    <section className="mt-10 px-4 md:px-8 lg:px-20">
+      {/* Added mb-10 here to increase space below the title */}
+      <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
+        <Title>Direct and Indirect Competitors</Title>
       </div>
 
-      <div className="max-w-4xl mx-auto bg-white dark:bg-[#0A0F1E] shadow-2xl rounded-3xl overflow-hidden border border-box-border">
-        <table className="w-full text-left border-collapse">
+      <div className="overflow-x-auto rounded-xl shadow-lg">
+        <table
+          className={`min-w-full text-sm md:text-base transition-colors duration-300 border-collapse ${
+            theme === "dark"
+              ? "bg-transparent text-white"
+              : "bg-white text-gray-900"
+          }`}
+        >
           <thead>
-            <tr className="text-sm text-white">
-              <th className="bg-gradient-to-r from-indigo-600 to-violet-600 p-4">Features</th>
-              <th className="bg-[#192033] p-4">LINKEDIN<br />(INDIRECT)</th>
-              <th className="bg-[#223A5E] p-4">BREEZY HR<br />(DIRECT)</th>
-              <th className="bg-[#2979FF] p-4">MANATAL<br />(DIRECT)</th>
-              <th className="bg-gradient-to-r from-cyan-500 to-blue-500 p-4">JOBA</th>
+            <tr
+              className={`transition-colors duration-300 ${
+                theme === "dark"
+                  ? "bg-zinc-900 text-white border-b border-zinc-700"
+                  : "bg-zinc-100 text-black border-b border-zinc-300"
+              }`}
+            >
+              <th className="p-4 text-left">Features</th>
+              <th className="p-4 text-left">LinkedIn</th>
+              <th className="p-4 text-left">Breezy HR</th>
+              <th className="p-4 text-left">Manatal</th>
+              <th className="p-4 text-left">JOBA</th>
             </tr>
           </thead>
-          <tbody className="text-sm text-heading-1 dark:text-white">
-            <tr className="border-b border-box-border">
-              <td className="p-4 font-medium">Smart matching for both sides</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-green-500">✔</td>
-              <td className="p-4 text-center text-green-500">✔</td>
-              <td className="p-4 text-center text-green-500">✔</td>
+          <tbody>
+            <tr
+              className={`transition-colors duration-300 ${
+                theme === "dark"
+                  ? "hover:bg-zinc-800 border-b border-zinc-700"
+                  : "hover:bg-zinc-100 border-b border-zinc-200"
+              }`}
+            >
+              <td className="p-4">Smart Matching for both sides</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">✅</td>
+              <td className="p-4">✅</td>
+              <td className="p-4">✅</td>
             </tr>
-            <tr className="border-b border-box-border">
-              <td className="p-4 font-medium">Candidates see only the most relevant job openings</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-green-500">✔</td>
+            <tr
+              className={`transition-colors duration-300 ${
+                theme === "dark"
+                  ? "hover:bg-zinc-800 border-b border-zinc-700"
+                  : "hover:bg-zinc-100 border-b border-zinc-200"
+              }`}
+            >
+              <td className="p-4">Candidates see only the most relevant job</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">✅</td>
             </tr>
-            <tr className="border-b border-box-border">
-              <td className="p-4 font-medium">Recruiters limit the number of candidates</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-green-500">✔</td>
+            <tr
+              className={`transition-colors duration-300 ${
+                theme === "dark"
+                  ? "hover:bg-zinc-800 border-b border-zinc-700"
+                  : "hover:bg-zinc-100 border-b border-zinc-200"
+              }`}
+            >
+              <td className="p-4">Recruiters limit the number of candidates</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">✅</td>
             </tr>
-            <tr>
-              <td className="p-4 font-medium">Dual-sided personalized questionnaire</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-red-500">✖</td>
-              <td className="p-4 text-center text-green-500">✔</td>
+            <tr
+              className={`transition-colors duration-300 ${
+                theme === "dark"
+                  ? "hover:bg-zinc-800 border-b border-zinc-700"
+                  : "hover:bg-zinc-100 border-b border-zinc-200"
+              }`}
+            >
+              <td className="p-4">Dual-sided personalized questionnaire</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">❌</td>
+              <td className="p-4">✅</td>
             </tr>
           </tbody>
         </table>

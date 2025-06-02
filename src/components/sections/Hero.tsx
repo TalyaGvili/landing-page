@@ -5,14 +5,9 @@ import { Numbers } from "./Numbers";
 export const Hero = () => {
   return (
     <section className="relative pt-32 lg:pt-36">
-      <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
+      <Container className="flex flex-col lg:flex-row gap-4 lg:gap-12">
         {/* Background effects */}
         <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
-          <span
-            className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 
-                        skew-x-12 rounded-3xl bg-gradient-to-r from-blue-600 to-violet-600
-                        blur-xl opacity-60 lg:opacity-95 lg:block hidden"
-          ></span>
           <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
         </div>
 
@@ -37,14 +32,18 @@ export const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-          <img
-            src="/assets/hero-joba.png"
-            alt="Hero image"
-            width={2350}
-            height={2359}
-            className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover object-top lg:max-h-none max-h-96"
-          />
+        <div className="flex flex-1 lg:w-1/2 justify-center items-center">
+          <div className="relative max-w-[400px] w-full">
+            <img
+              src="/assets/hero-joba.png"
+              alt="Hero image"
+              className="w-full h-auto object-contain rounded-3xl"
+            />
+            <span 
+              className="absolute bottom-5 left-0 w-full h-8 rounded-b-2xl 
+                        bg-gray-300 blur-2xl opacity-70"
+            />
+          </div>
         </div>
       </Container>
       <Numbers />

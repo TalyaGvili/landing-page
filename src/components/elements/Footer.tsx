@@ -6,7 +6,7 @@ import { useThemeStore } from "../../store/ThemeStore";
 export const Footer = () => {
 
   // Dynamically set logo by theme
-  const logo = "/assets/joba-logo.webp";
+  const logo = "/assets/JOBA-logo.png";
 
   return (
     <footer className="relative pt-28 rounded-t-3xl bg-box-bg">

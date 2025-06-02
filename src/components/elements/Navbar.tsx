@@ -14,16 +14,16 @@ export const Navbar = () => {
   const { toggleTheme, theme } = useThemeStore();
 
   // 👇 Dynamically set logo based on theme
-  const logo = "/assets/joba-logo.webp";
+  const logo = "/assets/JOBA-logo.png";
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 py-6">
       <Container>
-        <nav className="w-full flex justify-between gap-6 relative">
+      <nav className="w-full flex justify-between gap-6 relative transition-colors duration-500 ease-in-out">
           {/* Logo */}
           <div className="min-w-max inline-flex relative">
             <a href="/" className="relative flex items-center gap-3">
-            <img src={logo} alt="JOBA Logo" className="w-20 h-20 lg:w-26 lg:h-26" />
+            <img src={logo} alt="JOBA Logo" className="w-20 h-22 lg:w-26 lg:h-28" />
             </a>
           </div>
 
